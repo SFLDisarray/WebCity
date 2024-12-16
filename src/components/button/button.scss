@@ -1,0 +1,35 @@
+@import "../../assets/styles/variables";
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  background-color: $background-button;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+  width: 100%;
+  min-height: 40px;
+  &:hover {
+    background-color: rgba($background-button, .70);
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+  &:focus {
+    outline: none;
+    border: 2px solid $form-focus;
+  }
+  &-loading {
+    background-color: rgba($background-button, .5);
+    pointer-events: none;
+  }
+  &:disabled {
+    opacity: .5;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@import "../../../assets/styles/variables";
+
+.message-panel-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  cursor: default;
+
+  background-color: rgba(0, 0, 0, .25);
+
+  &__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 370px;
+    padding: 30px 35px;
+    background-color: $form-background;
+  }
+
+  &__header {
+    width: 300px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__description {
+    padding-top: 30px;
+  }
+
+  &__label {
+    display: block;
+  }
+
+  &__title {
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  &__textarea {
+    width: 100%;
+    resize: none;
+    background-color: $form-background;
+    border: none;
+    height: 30px;
+    color: $description-color;
+    border-bottom: 2px solid #fff;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    background-color: transparent;
+    width: 120px;
+    margin-left: 10px;
+
+    &--send {
+      &:hover {
+        background-color: rgba($control-panel-active-color-border, .8);
+      }
+    }
+  }
+
+  &__progress-text,
+  &__progress-per-percentage {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    color: #9F9DA3;
+  }
+}
